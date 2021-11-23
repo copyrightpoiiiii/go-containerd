@@ -1,121 +1,110 @@
 package main
 
 import (
+        "context"
+        "flag"
         "fmt"
         "os"
-        "io"
-        "bufio"
-        "strings"
-        "context"
         "syscall"
+        "time"
 
         //"github.com/containerd/containerd/cmd/ctr/commands"
         "github.com/containerd/containerd"
-        "github.com/containerd/containerd/snapshots"
         "github.com/containerd/containerd/cio"
-        "github.com/containerd/containerd/oci"
         "github.com/containerd/containerd/namespaces"
+        "github.com/containerd/containerd/oci"
+        "github.com/containerd/containerd/snapshots"
 )
 
+var image_name = flag.String("name", "", "")
+var image_tag = flag.String("tag", "", "")
+
 func main() {
-    f, err := os.Open("test.txt")
-    if err != nil {
-        fmt.Println(err)
-        return
-    }
-    defer f.Close()
 
-    buf := bufio.NewReader(f)
+        flag.Parse()
 
-    //client, ctx, cancel, err := commands.NewClient(context)
-
-    client, err := containerd.New("/run/containerd/containerd.sock")
-    if err != nil {
-        fmt.Println(err)
-        return
-    }
-    defer client.Close()
-
-    ctx := namespaces.WithNamespace(context.Background(), "default")
-    fmt.Println("point1")
-    for {
-            st :=  map[string]string{}
-            s, _, c := buf.ReadLine()
-            if c == io.EOF {
-                    break
-            }
-            v := strings.Split(string(s), "\t")
-            ref := "registry.cn-hangzhou.aliyuncs.com/qitest/" + v[0] + ":" + v[1] + "_conv"
-            i, err := client.ImageService().Get(ctx, ref)
-                        if err != nil {
-                                fmt.Println(err)
-                                return
-                        }
-            var image containerd.Image
-            image = containerd.NewImage(client,i)
-            unpacked, err := image.IsUnpacked(ctx, "overlaybd")
-            if err != nil {
+        client, err := containerd.New("/run/containerd/containerd.sock")
+        if err != nil {
                 fmt.Println(err)
                 return
-            }
-            fmt.Println("point 3")
-            if !unpacked {
+        }
+        defer client.Close()
+
+        ctx := namespaces.WithNamespace(context.Background(), "default")
+        file, err := os.OpenFile("result.txt", os.O_CREATE|os.O_APPEND|os.O_RDWR, os.ModeAppend)
+        if err != nil {
+                fmt.Println(err)
+                return
+        }
+        defer file.Close()
+        snps := client.SnapshotService("overlaybd")
+        snps.Remove(ctx, "test")
+
+        st := map[string]string{}
+
+        fmt.Fprintf(file, *image_name+":"+*image_tag+"\n")
+        ref := "registry.cn-hangzhou.aliyuncs.com/qitest/" + *image_name + ":" + *image_tag + "_conv"
+        i, err := client.ImageService().Get(ctx, ref)
+        if err != nil {
+                fmt.Println(err)
+                return
+        }
+        var image containerd.Image
+        image = containerd.NewImage(client, i)
+        unpacked, err := image.IsUnpacked(ctx, "overlaybd")
+        if err != nil {
+                fmt.Println(err)
+                return
+        }
+
+        if !unpacked {
                 if err := image.Unpack(ctx, "overlaybd"); err != nil {
-                    fmt.Println(err)
-                    return
+                        fmt.Println(err)
+                        return
                 }
-            }
-            fmt.Println("start container")
-            container, err := client.NewContainer(
+        }
+        startTime := time.Now()
+        container, err := client.NewContainer(
                 ctx,
                 "test",
                 containerd.WithImage(image),
                 containerd.WithSnapshotter("overlaybd"),
                 containerd.WithNewSnapshot("test", image, snapshots.WithLabels(st)),
                 containerd.WithNewSpec(oci.WithImageConfig(image)),
-            )
-            if err != nil {
+        )
+        if err != nil {
                 fmt.Println(err)
                 return
-            }
-            defer container.Delete(ctx, containerd.WithSnapshotCleanup)
+        }
+        defer container.Delete(ctx, containerd.WithSnapshotCleanup)
+        elapsedTime := time.Since(startTime) / time.Millisecond
+        fmt.Fprintf(file, "%d ", elapsedTime)
 
-            fmt.Println("start task")
-
-            task, err := container.NewTask(ctx, cio.NewCreator(cio.WithStdio))
-            if err != nil {
+        startTime = time.Now()
+        task, err := container.NewTask(ctx, cio.NewCreator(cio.WithStdio))
+        if err != nil {
                 fmt.Println(err)
                 return
-            }
-            defer task.Delete(ctx)
+        }
+        defer task.Delete(ctx)
+        elapsedTime = time.Since(startTime) / time.Millisecond
+        fmt.Fprintf(file, "%d ", elapsedTime)
 
-            exitStatusC, err := task.Wait(ctx)
-            if err != nil {
-                fmt.Println(err)
-            }
+        task.Wait(ctx)
 
-            if err := task.Start(ctx); err != nil {
-                fmt.Println(err)
-                return
-            }
-
-            if err := task.Kill(ctx, syscall.SIGTERM); err != nil {
+        startTime = time.Now()
+        if err := task.Start(ctx); err != nil {
                 fmt.Println(err)
                 return
-            }
+        }
+        elapsedTime = time.Since(startTime) / time.Millisecond
+        fmt.Fprintf(file, "%d \n", elapsedTime)
 
-            status := <-exitStatusC
-            code, _, err := status.Result()
-            if err != nil {
+        if err := task.Kill(ctx, syscall.SIGTERM); err != nil {
                 fmt.Println(err)
                 return
-            }
+        }
 
-            if _, err := task.Delete(ctx); err != nil {
-                fmt.Println(err)
-                return
-            }
-            fmt.Println("%d",code)
-            return
-    }
+        task.Delete(ctx, containerd.WithProcessKill)
+        return
 }
