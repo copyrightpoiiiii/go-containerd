@@ -7,11 +7,12 @@ import (
         "bufio"
         "strings"
         "context"
+        "syscall"
 
         //"github.com/containerd/containerd/cmd/ctr/commands"
         "github.com/containerd/containerd"
         "github.com/containerd/containerd/snapshots"
-        //"github.com/containerd/containerd/cio"
+        "github.com/containerd/containerd/cio"
         "github.com/containerd/containerd/oci"
         "github.com/containerd/containerd/namespaces"
 )
@@ -84,7 +85,7 @@ func main() {
             task, err := container.NewTask(ctx, cio.NewCreator(cio.WithStdio))
             if err != nil {
                 fmt.Println(err)
-                return 
+                return
             }
             defer task.Delete(ctx)
 
@@ -95,7 +96,7 @@ func main() {
 
             if err := task.Start(ctx); err != nil {
                 fmt.Println(err)
-                return 
+                return
             }
 
             if err := task.Kill(ctx, syscall.SIGTERM); err != nil {
@@ -111,9 +112,10 @@ func main() {
             }
 
             if _, err := task.Delete(ctx); err != nil {
-                return err
+                fmt.Println(err)
+                return
             }
-            
+            fmt.Println("%d",code)
             return
     }
 }
