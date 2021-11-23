@@ -7,6 +7,6 @@ for line in lines:
     print("echo "+a[0]+":"+a[1]+" >> test.log",file=sh)
     print("sudo ~/accelerated-container-image/bin/ctr rpull "+image +" | egrep 'elapsed|done:' |  tail -1 >> test.log",file=sh)
     print("sudo ./test --name="+a[0]+" --tag="+a[1],file=sh)
-    print("sudo ctr rm i "+image,file=sh)
+    print("sudo ctr i rm "+image,file=sh)
 
 sh.close()
