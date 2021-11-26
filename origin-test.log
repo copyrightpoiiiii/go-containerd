@@ -1,0 +1,122 @@
+appcenter:v1.0.1.4-4b865dd99-aliyun
+55576 38114 165 20 
+node-lifecycle-controller-amd64:v1.2.0-ce260ff
+30394 19584 188 20 
+aliyun-ingress-controller:v0.22.0.5-552e0db-aliyun
+512 88 238 19 
+csi-snapshotter:v3.0.2-1038b92d8-aliyun
+24262 17954 194 19 
+terway:v1.0.10.333-gfd2b7b8-aliyun
+472 480 805 23 
+aliyun-ingress-controller:v0.44.0.2-abf1c6fe4-aliyun
+22411 19226 189 20 
+terway:v1.0.10.390-g5f3c461-aliyun
+21117 21629 159 18 
+aliyun-ingress-controller:v0.44.0.3-8e83e7dc6-aliyun
+22772 19564 179 16 
+node-problem-detector:v0.6.3-28-160499f
+12432 9584 273 20 
+metrics-server:v0.3.8.5-307cf45-aliyun
+24995 13125 197 22 
+metrics-server:v0.3.7-4c92472-aliyun
+5090 1111 178 17 
+aliyun-acr-credential-helper:v21.01.26.0-9ac7d9b-aliyun
+23191 11188 249 22 
+node-problem-detector:v0.6.3-29-71bd5f8
+19741 9731 167 20 
+flexvolume:v1.12.6.52-f6604e5-aliyun
+11159 2610 330 24 
+flexvolume:v1.14.6.15-8d3b7e7-aliyun
+7202 2479 184 18 
+heapster-amd64:v1.5.1.1
+16375 5528 178 15 
+logtail:v0.16.62.0-da583e0-aliyun
+14588 5140 170 23 
+logtail:v0.16.34.2-f6647154-aliyun
+14560 4786 172 18 
+eventer:v1.6.0-4c4c66c-aliyun
+15604 5309 185 25 
+kube-apiserver:v1.18.8-aliyun.1
+9595 3225 564 18 
+velero:1.5.2-c875c98b-aliyun
+8470 3341 212 19 
+gpu-prometheus-exporter:v1.0.0-5c5a9f4
+9066 2620 171 21 
+arena-deploy-manager:0.8.6-a2bec8c-aliyun
+11065 5629 205 20 
+kube-scheduler:v1.20.4-ack-3.0
+7675 7403 157 18 
+kube-scheduler:v1.18-ack-3.1
+7703 1685 177 19 
+autoscaler:v1.3.1-9dc045bde-aliyun
+7444 2633 253 21 
+autoscaler:v1.3.1-ccdb37823-aliyun
+8386 3828 352 21 
+flexvolume:v1.18.8.166-b39c52a-aliyun
+6160 3918 270 20 
+agent:v1.13.1.21-g2c50771-aliyun
+6499 5680 448 23 
+gpu-prometheus-exporter:0.1-c7dd8d4
+7930 3543 206 20 
+kube-proxy:v1.18.8-aliyun.1
+6789 2847 146 17 
+k8s-gpushare-plugin:v1.0.0-c3a1bb8-aliyun
+8512 4753 201 23 
+kube-scheduler:v1.16.9-aliyun.1
+5796 3350 201 18 
+gpushare-device-plugin:v2.1.0-7b42b8c
+8416 3095 187 18 
+kube-proxy:v1.16.9-aliyun.1
+5565 3074 164 19 
+csi-provisioner:v1.6.0-e360c7e43-aliyun
+4921 2888 312 23 
+kube-proxy:v1.12.6-aliyun.1
+6121 3499 143 18 
+k8s-device-plugin:v1.0.0.1-12c5eb3-aliyun
+2950 1721 165 13 
+kube-apiserver:v1.20.4-aliyun.1
+6580 4869 175 14 
+kube-proxy:v1.14.8-aliyun.1
+5158 2941 202 20 
+kube-eventer-amd64:v1.2.4-0f5aaee-aliyun
+5552 4040 207 17 
+serving-cmd-queue:20200904154738_ask-release-0.13_ad9aafa8
+3929 1463 191 15 
+cloud-controller-manager-amd64:v1.9.3.380-gd6d0962-aliyun
+5705 1085 329 14 
+virtual-nodes-eci:v2.0.0.122-bdb884460-aliyun
+6376 1248 216 22 
+kubernetes-cronhpa-controller:v1.4.0-a2f4954d-aliyun
+5400 1231 367 27 
+kube-eventer-init:1.5-5e0e7c1-aliyun
+3784 828 172 20 
+flexvolume:v1.11.2.32-af2d48c-aliyun
+3656 908 165 20 
+agent:v1.13.1.34-gc6c53f2-aliyun
+4507 1417 585 22 
+csi-attacher:v2.1.0
+4042 976 177 20 
+flannel:v0.11.0.2-g6e46593e-aliyun
+3866 1137 218 19 
+kubectl:v1.15.0
+3975 1226 303 17 
+csi-resizer:v0.3.0
+3543 1010 215 31 
+kube-rbac-proxy:v0.4.1-bbc79f2e-aliyun
+3585 1219 209 20 
+check-hosts:480c740a4
+4765 1336 226 21 
+k8s-gpushare-schd-extender:v1.0.1-4e418f1-aliyun
+3539 897 192 25 
+kube-state-metrics:v1.6.0-f4ec1f70-aliyun
+3360 770 289 20 
+ack-kms-plugin:v1.0.1.0-g66f73e3-aliyun
+3014 727 342 21 
+node-exporter:v0.17.0
+2681 666 280 22 
+rogue-agent:v1.20.4-aliyun.1
+2902 755 191 23 
+csi-node-driver-registrar:v1.2.0
+2489 636 299 19 
+busybox:v1.29.2
+1410 434 198 14 

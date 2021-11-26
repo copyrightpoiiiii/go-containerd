@@ -1,0 +1,126 @@
+appcenter:v1.0.1.4-4b865dd99-aliyun
+elapsed: 2.0 s                                                                     total:  14.7 K (7.3 KiB/s)                                       
+node-lifecycle-controller-amd64:v1.2.0-ce260ff
+elapsed: 1.5 s                                                                                total:  4.6 Ki (3.1 KiB/s)                                       
+aliyun-ingress-controller:v0.22.0.5-552e0db-aliyun
+elapsed: 2.0 s                                                                                    total:  9.4 Ki (4.7 KiB/s)                                       
+csi-snapshotter:v3.0.2-1038b92d8-aliyun
+elapsed: 1.3 s                                                                         total:  4.3 Ki (3.3 KiB/s)                                       
+terway:v1.0.10.333-gfd2b7b8-aliyun
+elapsed: 1.9 s                                                                    total:  13.2 K (6.9 KiB/s)                                       
+aliyun-ingress-controller:v0.44.0.2-abf1c6fe4-aliyun
+elapsed: 2.0 s                                                                                      total:  15.1 K (7.5 KiB/s)                                       
+terway:v1.0.10.390-g5f3c461-aliyun
+elapsed: 1.9 s                                                                    total:  12.0 K (6.3 KiB/s)                                       
+aliyun-ingress-controller:v0.44.0.3-8e83e7dc6-aliyun
+elapsed: 1.9 s                                                                                      total:  15.3 K (8.1 KiB/s)                                       
+node-problem-detector:v0.6.3-28-160499f
+elapsed: 1.7 s                                                                         total:  4.2 Ki (2.5 KiB/s)                                       
+metrics-server:v0.3.8.5-307cf45-aliyun
+elapsed: 1.6 s                                                                        total:  6.3 Ki (3.9 KiB/s)                                       
+metrics-server:v0.3.7-4c92472-aliyun
+elapsed: 1.6 s                                                                      total:  6.3 Ki (3.9 KiB/s)                                       
+aliyun-acr-credential-helper:v21.01.26.0-9ac7d9b-aliyun
+elapsed: 1.8 s                                                                                         total:  6.9 Ki (3.8 KiB/s)                                       
+node-problem-detector:v0.6.3-29-71bd5f8
+elapsed: 0.3 s                                                                         total:   0.0 B (0.0 B/s)                                         
+flexvolume:v1.12.6.52-f6604e5-aliyun
+elapsed: 2.6 s                                                                      total:  13.4 K (5.1 KiB/s)                                       
+flexvolume:v1.14.6.15-8d3b7e7-aliyun
+elapsed: 2.4 s                                                                      total:  14.1 K (5.9 KiB/s)                                       
+heapster-amd64:v1.5.1.1
+elapsed: 1.7 s                                                                    total:  7.6 Ki (4.4 KiB/s)                                       
+logtail:v0.16.62.0-da583e0-aliyun
+elapsed: 1.9 s                                                                    total:  7.9 Ki (4.1 KiB/s)                                       
+logtail:v0.16.34.2-f6647154-aliyun
+elapsed: 2.0 s                                                                    total:  7.4 Ki (3.7 KiB/s)                                       
+eventer:v1.6.0-4c4c66c-aliyun
+elapsed: 1.9 s                                                                    total:   0.0 B (0.0 B/s)                                         
+kube-apiserver:v1.18.8-aliyun.1
+elapsed: 1.6 s                                                                    total:  1.6 Ki (1021.0 B/s)                                      
+velero:1.5.2-c875c98b-aliyun
+elapsed: 1.6 s                                                                    total:  6.7 Ki (4.2 KiB/s)                                       
+gpu-prometheus-exporter:v1.0.0-5c5a9f4
+elapsed: 1.9 s                                                                        total:  3.5 Ki (1.8 KiB/s)                                       
+kube-proxy:v1.18.8-aliyun.1
+elapsed: 1.8 s                                                                    total:  6.6 Ki (3.7 KiB/s)                                       
+arena-deploy-manager:0.8.6-a2bec8c-aliyun
+elapsed: 1.4 s                                                                           total:  4.6 Ki (3.3 KiB/s)                                       
+kube-scheduler:v1.20.4-ack-3.0
+elapsed: 1.5 s                                                                    total:  2.0 Ki (1.4 KiB/s)                                       
+kube-scheduler:v1.18-ack-3.1
+elapsed: 1.5 s                                                                    total:  3.4 Ki (2.2 KiB/s)                                       
+autoscaler:v1.3.1-9dc045bde-aliyun
+elapsed: 1.6 s                                                                    total:  4.1 Ki (2.5 KiB/s)                                       
+autoscaler:v1.3.1-ccdb37823-aliyun
+elapsed: 1.5 s                                                                    total:  4.1 Ki (2.7 KiB/s)                                       
+flexvolume:v1.18.8.166-b39c52a-aliyun
+elapsed: 1.9 s                                                                       total:  4.8 Ki (2.5 KiB/s)                                       
+agent:v1.13.1.21-g2c50771-aliyun
+elapsed: 2.0 s                                                                    total:  7.5 Ki (3.8 KiB/s)                                       
+gpu-prometheus-exporter:0.1-c7dd8d4
+elapsed: 0.3 s                                                                     total:   0.0 B (0.0 B/s)                                         
+k8s-gpushare-plugin:v1.0.0-c3a1bb8-aliyun
+elapsed: 1.5 s                                                                           total:  2.0 Ki (1.4 KiB/s)                                       
+kube-scheduler:v1.16.9-aliyun.1
+elapsed: 1.5 s                                                                    total:  1.6 Ki (1.1 KiB/s)                                       
+gpushare-device-plugin:v2.1.0-7b42b8c
+elapsed: 1.5 s                                                                       total:  1.6 Ki (1.1 KiB/s)                                       
+kube-proxy:v1.16.9-aliyun.1
+elapsed: 1.6 s                                                                    total:  3.4 Ki (2.1 KiB/s)                                       
+csi-provisioner:v1.6.0-e360c7e43-aliyun
+elapsed: 1.6 s                                                                         total:  3.5 Ki (2.2 KiB/s)                                       
+kube-proxy:v1.12.6-aliyun.1
+elapsed: 1.6 s                                                                    total:  3.4 Ki (2.1 KiB/s)                                       
+k8s-device-plugin:v1.0.0.1-12c5eb3-aliyun
+elapsed: 1.5 s                                                                           total:  1.6 Ki (1.1 KiB/s)                                       
+kube-apiserver:v1.20.4-aliyun.1
+elapsed: 1.7 s                                                                    total:  3.5 Ki (2.0 KiB/s)                                       
+kube-proxy:v1.14.8-aliyun.1
+elapsed: 1.6 s                                                                    total:  3.4 Ki (2.1 KiB/s)                                       
+kube-eventer-amd64:v1.2.4-0f5aaee-aliyun
+elapsed: 1.8 s                                                                          total:  4.8 Ki (2.7 KiB/s)                                       
+serving-cmd-queue:20200904154738_ask-release-0.13_ad9aafa8
+elapsed: 1.5 s                                                                                            total:  4.2 Ki (2.8 KiB/s)                                       
+cloud-controller-manager-amd64:v1.9.3.380-gd6d0962-aliyun
+elapsed: 1.6 s                                                                                           total:  3.3 Ki (2.1 KiB/s)                                       
+virtual-nodes-eci:v2.0.0.122-bdb884460-aliyun
+elapsed: 1.9 s                                                                               total:  3.5 Ki (1.9 KiB/s)                                       
+kubernetes-cronhpa-controller:v1.4.0-a2f4954d-aliyun
+elapsed: 1.6 s                                                                                      total:  4.7 Ki (3.0 KiB/s)                                       
+kube-eventer-init:1.5-5e0e7c1-aliyun
+elapsed: 1.6 s                                                                      total:  4.0 Ki (2.5 KiB/s)                                       
+flexvolume:v1.11.2.32-af2d48c-aliyun
+elapsed: 1.9 s                                                                      total:  11.2 K (5.9 KiB/s)                                       
+agent:v1.13.1.34-gc6c53f2-aliyun
+elapsed: 1.6 s                                                                    total:  4.1 Ki (2.5 KiB/s)                                       
+csi-attacher:v2.1.0
+elapsed: 1.4 s                                                                    total:  2.8 Ki (2.0 KiB/s)                                       
+flannel:v0.11.0.2-g6e46593e-aliyun
+elapsed: 1.7 s                                                                    total:  2.9 Ki (1.7 KiB/s)                                       
+kubectl:v1.15.0
+elapsed: 1.6 s                                                                    total:  2.0 Ki (1.3 KiB/s)                                       
+csi-resizer:v0.3.0
+elapsed: 1.5 s                                                                    total:  1.6 Ki (1.1 KiB/s)                                       
+kube-rbac-proxy:v0.4.1-bbc79f2e-aliyun
+elapsed: 1.8 s                                                                        total:  3.4 Ki (1.9 KiB/s)                                       
+check-hosts:480c740a4
+elapsed: 1.7 s                                                                    total:  4.3 Ki (2.5 KiB/s)                                       
+coredns:v1.7.0.0-f59c03d-aliyun
+elapsed: 1.7 s                                                                    total:  2.8 Ki (1.6 KiB/s)                                       
+k8s-gpushare-schd-extender:v1.0.1-4e418f1-aliyun
+elapsed: 1.5 s                                                                                  total:  2.7 Ki (1.8 KiB/s)                                       
+kube-state-metrics:v1.6.0-f4ec1f70-aliyun
+elapsed: 1.6 s                                                                           total:  2.8 Ki (1.7 KiB/s)                                       
+ack-kms-plugin:v1.0.1.0-g66f73e3-aliyun
+elapsed: 1.6 s                                                                         total:  2.7 Ki (1.7 KiB/s)                                       
+node-exporter:v0.17.0
+elapsed: 1.6 s                                                                    total:  3.6 Ki (2.2 KiB/s)                                       
+rogue-agent:v1.20.4-aliyun.1
+elapsed: 1.6 s                                                                    total:  4.9 Ki (3.1 KiB/s)                                       
+csi-node-driver-registrar:v1.2.0
+elapsed: 1.7 s                                                                    total:  1.6 Ki (963.0 B/s)                                       
+heapster-influxdb-amd64:v1.1.1
+elapsed: 1.6 s                                                                    total:  3.4 Ki (2.1 KiB/s)                                       
+busybox:v1.29.2
+elapsed: 1.3 s                                                                    total:  1.2 Ki (899.0 B/s)                                       
